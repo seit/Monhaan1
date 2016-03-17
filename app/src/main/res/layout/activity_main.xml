@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
+        <variable name="activity" type="techium.hatenablog.com.monhaan1.MainActivity"/>
         <variable name="hanter" type="techium.hatenablog.com.monhaan1.Hanter"/>
     </data>
 
@@ -52,5 +53,20 @@
             android:layout_toRightOf="@id/lbl_gender"
             android:text="@{hanter.gender}" />
 
+        <Button
+            android:id="@+id/btn_change_gender"
+            android:text="change gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbl_gender"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_change_gender"-->
+            <!--android:text="change gender"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/lbl_gender"-->
+            <!--app:onClickListener="@{activity.changeGenderListener}"-->
+            <!--/>-->
     </RelativeLayout>
 </layout>

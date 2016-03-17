@@ -1,9 +1,12 @@
 package techium.hatenablog.com.monhaan1;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
+
 /**
  * Created by uenakamasanobu on 2016/03/03.
  */
-public class Hanter {
+public class Hanter extends BaseObservable {
     private String name;
     private String gender;
 
@@ -16,8 +19,14 @@ public class Hanter {
         return this.name;
     }
 
+    @Bindable
     public String getGender() {
         return this.gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+        notifyPropertyChanged(techium.hatenablog.com.monhaan1.BR.gender);
     }
 
 }
